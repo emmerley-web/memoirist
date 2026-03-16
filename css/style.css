@@ -62,7 +62,7 @@ h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); }
 h2 { font-size: clamp(1.9rem, 3.5vw, 2.9rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
-p { max-width: 68ch; }
+/* Paragraphs fill their column — max-widths set by context, not globally */
 
 .eyebrow {
   font-family: var(--font-sans);
@@ -102,15 +102,15 @@ p { max-width: 68ch; }
 }
 
 /* --------------------------------------------------------------------------
-   Navigation — pure white so logo PNG background is invisible
+   Navigation — dark background; logo rendered white via CSS filter
    -------------------------------------------------------------------------- */
 
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--white);
-  border-bottom: 1px solid var(--rule);
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   padding-block: 1.35rem;
 }
 
@@ -127,18 +127,19 @@ p { max-width: 68ch; }
   flex-shrink: 0;
 }
 
-/* Logo sized for legibility — pure white nav means white bg on PNG is invisible */
+/* Logo: brightness(0) makes all pixels black, invert(1) flips to white — clean on any dark bg */
 .logo-img {
   height: 44px;
   width: auto;
   display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
-/* Footer inverted logo for dark background */
 .site-footer .logo-img {
   height: 32px;
   filter: brightness(0) invert(1);
-  opacity: 0.85;
+  opacity: 0.7;
 }
 
 .nav-links {
@@ -150,13 +151,13 @@ p { max-width: 68ch; }
 .nav-links a {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--ink-light);
+  color: rgba(250,249,246,0.65);
   transition: color var(--transition);
   letter-spacing: 0.02em;
 }
 
 .nav-links a:hover,
-.nav-links a.active { color: var(--gold); }
+.nav-links a.active { color: var(--paper); }
 
 .nav-cta {
   background: var(--gold) !important;
@@ -187,7 +188,7 @@ p { max-width: 68ch; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--ink);
+  background: var(--paper);
   transition: var(--transition);
 }
 
@@ -552,26 +553,27 @@ p { max-width: 68ch; }
 .about-text .btn     { margin-top: 1.75rem; }
 
 /* --------------------------------------------------------------------------
-   CTA banner
+   CTA strip — compact horizontal band (replaces old centred block)
    -------------------------------------------------------------------------- */
 
-.cta-banner {
-  text-align: center;
-  padding-block: 5.5rem;
+.cta-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-block: 3.25rem;
 }
 
-.cta-banner h2 { margin-bottom: 1rem; max-width: none; }
-.cta-banner p  {
-  color: rgba(250,249,246,0.65);
-  max-width: 46ch;
-  margin-inline: auto;
-  margin-bottom: 2.75rem;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
+.cta-strip-text .eyebrow { margin-bottom: 0.5rem; }
 
-/* Light cta (on paper background) */
-.cta-banner--light p { color: var(--muted); }
+.cta-strip-text h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 500;
+  color: var(--paper);
+  line-height: 1.25;
+  max-width: 36ch;
+}
 
 /* --------------------------------------------------------------------------
    FAQ accordion
@@ -738,35 +740,45 @@ p { max-width: 68ch; }
 .credential-item p  { font-size: 0.875rem; color: var(--muted); max-width: none; line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
-   Services page
+   Services page — two-column layout: sticky aside + scrolling body
    -------------------------------------------------------------------------- */
 
 .service-detail {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5rem;
   padding-block: 5rem;
   border-bottom: 1px solid var(--rule);
+  align-items: start;
 }
 
 .service-detail:last-child { border-bottom: none; }
 
+.service-detail-aside {
+  position: sticky;
+  top: 5.5rem; /* clears dark nav */
+}
+
 .service-detail-num {
   font-family: var(--font-serif);
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: var(--rule);
   line-height: 0.9;
   margin-bottom: 0.75rem;
   font-weight: 400;
 }
 
-.service-detail h2  { margin-bottom: 1.25rem; }
-.service-detail .lead {
+.service-detail-aside h2  { margin-bottom: 1.5rem; font-size: clamp(1.6rem, 2.5vw, 2.1rem); }
+.service-detail-aside .btn { display: block; text-align: center; margin-top: 0; }
+
+.service-detail-body .lead {
   font-size: 1.15rem;
   color: var(--ink-light);
   margin-bottom: 2rem;
   line-height: 1.75;
-  max-width: 60ch;
 }
 
-.service-detail p {
+.service-detail-body p {
   color: var(--muted);
   line-height: 1.85;
   margin-bottom: 1.1rem;
@@ -891,9 +903,12 @@ p { max-width: 68ch; }
     align-items: flex-start;
   }
   .step-num { margin: 0; flex-shrink: 0; }
-  .footer-inner  { grid-template-columns: 1fr 1fr; }
-  .contact-grid  { grid-template-columns: 1fr; gap: 3.5rem; }
-  .photo-strip   { height: 320px; }
+  .footer-inner     { grid-template-columns: 1fr 1fr; }
+  .contact-grid     { grid-template-columns: 1fr; gap: 3.5rem; }
+  .photo-strip      { height: 320px; }
+  .service-detail   { grid-template-columns: 1fr; gap: 2.5rem; }
+  .service-detail-aside { position: static; }
+  .cta-strip        { flex-direction: column; align-items: flex-start; gap: 2rem; }
 }
 
 @media (max-width: 640px) {
@@ -921,15 +936,15 @@ p { max-width: 68ch; }
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--rule);
+    background: var(--ink);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     padding: 0.5rem 1.5rem 1.5rem;
     z-index: 99;
   }
   .nav-links.open a {
     padding-block: 0.85rem;
-    border-bottom: 1px solid var(--rule);
-    color: var(--ink);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: rgba(250,249,246,0.75);
   }
   .nav-links.open a:last-child { border-bottom: none; }
   .nav-links.open .nav-cta {
