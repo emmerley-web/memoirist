@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Memoirist | Emily Liao</title>
+  <meta name="description" content="Get in touch with Emily Liao for a free consultation about ghostwriting, memoir collaboration, book proposals, or developmental editing.">
+  <link rel="canonical" href="https://www.memoirist.co.uk/contact">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html">Memo<span>i</span>rist</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html" class="active nav-cta">Get in touch</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero section--cream">
+    <div class="container">
+      <p class="eyebrow">Let's talk</p>
+      <h1>Ready to share<br>your story?</h1>
+      <p class="sub">
+        The first step is a free, no-obligation conversation. Tell me about your project
+        and we'll explore whether working together makes sense.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact content -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Sidebar -->
+        <div class="contact-sidebar">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Free consultation, no strings.</h2>
+          <p>
+            A 30-minute call to discuss your story, your goals, and whether
+            working together is the right fit. There's no commitment required,
+            and no silly questions.
+          </p>
+          <p>
+            I respond to all enquiries within two business days.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <a href="mailto:emily@memoirist.co.uk">emily@memoirist.co.uk</a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">💼</div>
+              <a href="https://www.linkedin.com/in/emilytheghost/" target="_blank" rel="noopener">
+                LinkedIn — @emilytheghost
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🏙️</div>
+              <span>London, United Kingdom<br><small style="color: var(--muted);">Available internationally via video call</small></span>
+            </div>
+          </div>
+
+          <!-- What to expect -->
+          <div style="padding: 1.75rem; background: var(--cream); border-radius: 3px; border: 1px solid var(--rule);">
+            <h4 style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; color: var(--ink-light);">What happens next</h4>
+            <ol style="display: flex; flex-direction: column; gap: 0.7rem; padding-left: 1.2rem; color: var(--muted); font-size: 0.9rem; line-height: 1.6;">
+              <li>I'll reply within two business days to schedule a call</li>
+              <li>We have a 30-minute free consultation</li>
+              <li>If it's a good fit, I'll send a written proposal</li>
+              <li>Once agreed, we begin</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <form
+            action="https://formspree.io/f/emily@memoirist.co.uk"
+            method="POST"
+            id="contact-form"
+          >
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first_name" required placeholder="Jane">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last_name" required placeholder="Smith">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service you're interested in</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service…</option>
+                <option value="ghostwriting">Ghostwriting (full manuscript)</option>
+                <option value="proposal">Book Proposal Writing</option>
+                <option value="editing">Developmental Editing</option>
+                <option value="unsure">Not sure yet — I'd like to discuss</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell me about your project</label>
+              <textarea id="message" name="message" rows="6" required
+                placeholder="Briefly describe your story or project — what it's about, where you are in the process, and what you're hoping to achieve."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="how">How did you find me?</label>
+              <input type="text" id="how" name="referral" placeholder="Google, LinkedIn, a referral…">
+            </div>
+
+            <!-- honeypot -->
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_subject" value="New enquiry — Memoirist">
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1rem;">
+              Send enquiry
+            </button>
+
+            <p class="form-note" style="text-align: center; margin-top: 1rem;">
+              I'll respond within two business days. Your details will never be shared with third parties.
+            </p>
+          </form>
+
+          <!-- Success message (shown by JS after submit) -->
+          <div id="form-success" style="display: none; padding: 2.5rem; background: var(--cream); border: 1px solid var(--rule); border-radius: 3px; text-align: center;">
+            <p style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem;">Thank you.</p>
+            <p style="color: var(--muted);">Your message has been sent. I'll be in touch within two business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="nav-logo" href="index.html">Memo<span style="color:var(--gold)">i</span>rist</a>
+          <p>A collaborative ghostwriting experience with Emily Liao — London-based memoirist and book collaborator.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:emily@memoirist.co.uk">emily@memoirist.co.uk</a></li>
+            <li><a href="https://www.linkedin.com/in/emilytheghost/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Memoirist — Emily Liao</span>
+        <span>London, United Kingdom</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Handle Formspree AJAX submission
+    const form    = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res  = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        // Fallback: submit normally
+        form.submit();
+      }
+    });
+  </script>
+
+  <style>
+    @media (max-width: 640px) {
+      .contact-grid > div:first-child + div form > div:first-child {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</body>
+</html>
