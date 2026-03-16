@@ -341,7 +341,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: rgba(250,249,246,0.5);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -406,10 +406,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   align-items: center;
   gap: 0.4rem;
   margin-top: 1.75rem;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--gold);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -566,7 +566,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   font-family: var(--font-serif);
   font-size: clamp(1.3rem, 2.5vw, 1.9rem);
   font-weight: 500;
-  color: var(--paper);
+  color: var(--ink);
   line-height: 1.25;
   max-width: 36ch;
 }
@@ -660,7 +660,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 }
 
 .cta-banner p:not(.eyebrow) {
-  color: rgba(250,249,246,0.65);
+  color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 52ch;
@@ -770,9 +770,9 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 .form-group label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 0.5rem;
@@ -954,7 +954,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   background: var(--ink);
   color: var(--paper);
   padding-block: 4rem 2rem;
-  border-top: 2px solid var(--gold);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-inner {
