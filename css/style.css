@@ -716,7 +716,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 
 .about-facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
