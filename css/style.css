@@ -3,7 +3,7 @@
    Global Styles
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /* --------------------------------------------------------------------------
    Custom Properties
@@ -20,8 +20,8 @@
   --gold-dark:  #8f6f38;
   --white:      #ffffff;
 
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans:  'Inter', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
 
   --max-w:       1140px;
   --section-gap: 7rem;
@@ -58,9 +58,9 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); }
-h2 { font-size: clamp(1.9rem, 3.5vw, 2.9rem); }
-h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
+h1 { font-size: clamp(2.9rem, 6vw, 5rem); }
+h2 { font-size: clamp(2.1rem, 3.8vw, 3.2rem); }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); }
 
 /* Paragraphs fill their column — max-widths set by context, not globally */
 
