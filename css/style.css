@@ -593,7 +593,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); }
 
 @media (max-width: 960px) {
   .trust-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .press-grid { grid-template-columns: repeat(2, 1fr); }
+  .press-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -603,7 +603,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); }
 /* Press / writing links grid */
 .press-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -622,11 +622,28 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); }
 .press-logo-link { display: inline-block; }
 .press-logo { height: 36px; width: auto; }
 
+/* Duke CE logo sits on brand-navy so the white SVG is visible */
+.press-logo-bg--duke {
+  display: inline-flex;
+  align-items: center;
+  background: #001A57;
+  padding: 7px 14px;
+  border-radius: 3px;
+}
+
 .press-pub {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--ink);
+}
+
+.press-credit {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .press-desc {
