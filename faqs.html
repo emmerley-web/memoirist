@@ -458,25 +458,12 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links  = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-
-    // Smooth highlight active sidebar link on scroll
-    const sections = document.querySelectorAll('[id]');
+    // Smooth highlight active sidebar link on scroll (FAQ page only)
+    const sections     = document.querySelectorAll('[id]');
     const sidebarLinks = document.querySelectorAll('.faq-sidebar a');
-    const observer = new IntersectionObserver((entries) => {
+    const observer     = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           sidebarLinks.forEach(l => l.style.color = 'var(--muted)');

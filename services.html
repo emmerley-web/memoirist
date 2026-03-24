@@ -110,7 +110,7 @@
     <div class="container">
 
       <!-- Ghostwriting -->
-      <div class="service-detail" id="ghostwriting">
+      <div class="service-detail" id="ghostwriting" data-reveal>
         <div class="service-detail-aside">
           <div class="service-detail-num">01</div>
           <h2>Ghostwriting</h2>
@@ -159,7 +159,7 @@
       </div>
 
       <!-- Book Coaching -->
-      <div class="service-detail" id="coaching">
+      <div class="service-detail" id="coaching" data-reveal>
         <div class="service-detail-aside">
           <div class="service-detail-num">02</div>
           <h2>Book Coaching</h2>
@@ -191,7 +191,7 @@
       </div>
 
       <!-- Book Proposal -->
-      <div class="service-detail" id="proposal">
+      <div class="service-detail" id="proposal" data-reveal>
         <div class="service-detail-aside">
           <div class="service-detail-num">03</div>
           <h2>Book Proposal Writing</h2>
@@ -223,7 +223,7 @@
       </div>
 
       <!-- Developmental Editing -->
-      <div class="service-detail" id="editing">
+      <div class="service-detail" id="editing" data-reveal>
         <div class="service-detail-aside">
           <div class="service-detail-num">04</div>
           <h2>Developmental Editing</h2>
@@ -260,27 +260,27 @@
   <!-- Process -->
   <section class="section" style="background: var(--cream);">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro" data-reveal>
         <p class="eyebrow">The process</p>
         <h2>Every project begins<br>with a conversation.</h2>
         <p>Different services, same starting point: a conversation about what you want to make.</p>
       </div>
       <div class="process-steps">
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="0">
           <div class="step-num">01</div>
           <div>
             <h3>Free consultation</h3>
             <p>A free call to hear about your project and work out whether we're a good fit for each other.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="100">
           <div class="step-num">02</div>
           <div>
             <h3>Proposal &amp; agreement</h3>
             <p>A written proposal covering scope, timeline, and cost. You see everything before work starts.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="200">
           <div class="step-num">03</div>
           <div>
             <h3>Delivery &amp; handover</h3>
@@ -333,10 +333,6 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links  = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

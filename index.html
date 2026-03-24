@@ -78,6 +78,10 @@
         <a href="contact.html" class="btn btn-gold">Book a free story consultation</a>
         <a href="services.html" class="btn btn-outline-light">Explore services</a>
       </div>
+      <div class="hero-quote">
+        <p>"She helped me find the words I'd spent sixty years looking for."</p>
+        <cite>— Client, memoir ghostwriting</cite>
+      </div>
     </div>
   </section>
 
@@ -115,7 +119,7 @@
        ===================================================================== -->
   <section class="section">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro" data-reveal>
         <p class="eyebrow">What I offer</p>
         <h2>Professional writing<br>at every stage</h2>
         <p>
@@ -124,7 +128,7 @@
         </p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" data-reveal data-reveal-delay="0">
           <h3>Ghostwriting</h3>
           <p>
             From first conversation to finished manuscript. The voice, the story, and the book
@@ -132,7 +136,7 @@
           </p>
           <a href="services.html#ghostwriting" class="card-link">Learn more →</a>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-reveal data-reveal-delay="80">
           <h3>Book Coaching</h3>
           <p>
             You do the writing; I provide the structure, guidance, and editorial feedback to
@@ -140,7 +144,7 @@
           </p>
           <a href="services.html#coaching" class="card-link">Learn more →</a>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-reveal data-reveal-delay="160">
           <h3>Book Proposal</h3>
           <p>
             For writers pursuing traditional publishing. A proposal that makes the case for
@@ -148,7 +152,7 @@
           </p>
           <a href="services.html#proposal" class="card-link">Learn more →</a>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-reveal data-reveal-delay="240">
           <h3>Developmental Editing</h3>
           <p>
             Already have a draft? Developmental editing looks at structure, pacing, and arc.
@@ -166,7 +170,7 @@
   <section class="section section--cream">
     <div class="container">
       <div class="trust-grid">
-        <div class="trust-item">
+        <div class="trust-item" data-reveal data-reveal-delay="0">
           <h3>Your voice, not mine.</h3>
           <p>
             The manuscript will sound like you wrote every word. Before anything is written,
@@ -174,14 +178,14 @@
             they reach for, what they leave out. Voice capture is the job.
           </p>
         </div>
-        <div class="trust-item">
+        <div class="trust-item" data-reveal data-reveal-delay="100">
           <h3>Your name on the cover.</h3>
           <p>
             Copyright and all royalties stay with you. Everything is set out in a written
             agreement before work starts. Emily takes no credit unless you offer it.
           </p>
         </div>
-        <div class="trust-item">
+        <div class="trust-item" data-reveal data-reveal-delay="200">
           <h3>Confidential by design.</h3>
           <p>
             Everything shared in the process stays between us. All engagements are covered
@@ -208,7 +212,7 @@
        ===================================================================== -->
   <section class="section">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro" data-reveal>
         <p class="eyebrow">The process</p>
         <h2>How it works</h2>
         <p>
@@ -218,21 +222,21 @@
         </p>
       </div>
       <div class="process-steps">
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="0">
           <div class="step-num">01</div>
           <div>
             <h3>Free consultation</h3>
             <p>We discuss your story, goals, timeline, and whether we're the right fit for each other.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="100">
           <div class="step-num">02</div>
           <div>
             <h3>Interviews &amp; drafting</h3>
             <p>Regular sessions to draw out your story. Between sessions, I write. You read and give feedback.</p>
           </div>
         </div>
-        <div class="step">
+        <div class="step" data-reveal data-reveal-delay="200">
           <div class="step-num">03</div>
           <div>
             <h3>Revise &amp; deliver</h3>
@@ -249,8 +253,8 @@
   <section class="section">
     <div class="container">
       <div class="grid-2">
-        <img src="assets/emily.jpg" alt="Emily Liao, memoirist and ghostwriter" class="about-photo">
-        <div class="about-text">
+        <img src="assets/emily.jpg" alt="Emily Liao, memoirist and ghostwriter" class="about-photo" data-reveal>
+        <div class="about-text" data-reveal data-reveal-delay="120">
           <p class="eyebrow">About Emily</p>
           <h2>Writing that listens before it speaks.</h2>
           <p>
@@ -279,12 +283,12 @@
   <section class="section section--cream">
     <div class="container">
       <div class="testimonial-block">
-        <p class="testimonial-quote">
+        <p class="testimonial-quote" data-reveal>
           "She is super professional and always respectful of my point of view, while
           suggesting new ideas and new ways of writing things. Spontaneous, responsible,
           and concise."
         </p>
-        <p class="testimonial-attr">— Christine Ngo, client</p>
+        <p class="testimonial-attr" data-reveal data-reveal-delay="150">— Christine Ngo, client</p>
       </div>
     </div>
   </section>
@@ -294,7 +298,7 @@
        ===================================================================== -->
   <section class="section--cream" style="border-top: 1px solid var(--rule);">
     <div class="container">
-      <div class="cta-strip">
+      <div class="cta-strip" data-reveal>
         <div class="cta-strip-text">
           <p class="eyebrow">Ready to begin?</p>
           <h3>Not sure if your story is ready? Let's find out.</h3>
@@ -339,21 +343,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const toggle = document.getElementById('nav-toggle');
-    const links  = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

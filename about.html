@@ -71,8 +71,8 @@
   <section class="section">
     <div class="container">
       <div class="grid-2">
-        <img src="assets/emily.jpg" alt="Emily Liao, memoirist and ghostwriter" class="about-photo" style="min-height: 480px;">
-        <div class="about-text">
+        <img src="assets/emily.jpg" alt="Emily Liao, memoirist and ghostwriter" class="about-photo" style="min-height: 480px;" data-reveal>
+        <div class="about-text" data-reveal data-reveal-delay="120">
           <p class="eyebrow">Her approach</p>
           <h2>Writing that listens before it speaks.</h2>
           <p>
@@ -103,22 +103,22 @@
   <section class="section section--cream">
     <div class="container">
       <div class="about-facts">
-        <div class="about-fact">
+        <div class="about-fact" data-reveal data-reveal-delay="0">
           <p class="about-fact-num">10+</p>
           <p class="about-fact-label">Books ghostwritten, edited, and consulted</p>
           <p class="about-fact-detail">Across memoir, business narrative, and hybrid non-fiction. Each one different.</p>
         </div>
-        <div class="about-fact">
+        <div class="about-fact" data-reveal data-reveal-delay="80">
           <p class="about-fact-num">4</p>
           <p class="about-fact-label">Continents</p>
           <p class="about-fact-detail">Emily works with clients internationally and is at home with stories that span cultures and places.</p>
         </div>
-        <div class="about-fact">
+        <div class="about-fact" data-reveal data-reveal-delay="160">
           <p class="about-fact-num">6–12</p>
           <p class="about-fact-label">Months per manuscript</p>
           <p class="about-fact-detail">A realistic timeline built around getting it right, not getting it done quickly.</p>
         </div>
-        <div class="about-fact">
+        <div class="about-fact" data-reveal data-reveal-delay="240">
           <p class="about-fact-num">∞</p>
           <p class="about-fact-label">Follow-up questions</p>
           <p class="about-fact-detail">"Why?" and "What did that mean to you?" — asked often, without apology.</p>
@@ -204,13 +204,13 @@
   <!-- Published Work -->
   <section class="section section--cream">
     <div class="container">
-      <div class="section-intro">
+      <div class="section-intro" data-reveal>
         <p class="eyebrow">Writing &amp; press</p>
         <h2>Published work</h2>
       </div>
       <div class="press-grid">
 
-        <div class="press-item">
+        <div class="press-item" data-reveal data-reveal-delay="0">
           <a href="https://associationofghostwriters.org/" target="_blank" rel="noopener" class="press-logo-link">
             <img src="https://associationofghostwriters.org/wp-content/uploads/2021/09/Color-Logo.svg"
                  alt="Association of Ghostwriters"
@@ -222,7 +222,7 @@
           <a href="https://associationofghostwriters.org/spotlight/emily-liao/" target="_blank" rel="noopener" class="card-link">Read the interview →</a>
         </div>
 
-        <div class="press-item">
+        <div class="press-item" data-reveal data-reveal-delay="80">
           <a href="https://www.dukece.com/insights/the-case-for-white-box-ai/" target="_blank" rel="noopener" class="press-logo-link">
             <span class="press-logo-bg press-logo-bg--duke">
               <img src="https://www.dukece.com/wp-content/uploads/2023/10/duke-ce-logo-white.svg"
@@ -237,7 +237,7 @@
           <a href="https://www.dukece.com/insights/the-case-for-white-box-ai/" target="_blank" rel="noopener" class="card-link">Read the article →</a>
         </div>
 
-        <div class="press-item">
+        <div class="press-item" data-reveal data-reveal-delay="0">
           <p class="press-pub">Weaver Widow Refugee</p>
           <p class="press-credit">Editor</p>
           <p class="press-desc">
@@ -247,7 +247,7 @@
           <a href="https://www.amazon.com/dp/B0DKJP9C3P" target="_blank" rel="noopener" class="card-link">Read on Kindle →</a>
         </div>
 
-        <div class="press-item">
+        <div class="press-item" data-reveal data-reveal-delay="80">
           <p class="press-pub">Lead Like a Pro, Inspire Like a Leader</p>
           <p class="press-credit">Ghostwriter</p>
           <p class="press-desc">
@@ -264,7 +264,7 @@
   <!-- CTA -->
   <section class="section--cream" style="border-top: 1px solid var(--rule);">
     <div class="container">
-      <div class="cta-strip">
+      <div class="cta-strip" data-reveal>
         <div class="cta-strip-text">
           <p class="eyebrow">Ready to begin?</p>
           <h3>Let's talk about your story.</h3>
@@ -306,10 +306,6 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.getElementById('nav-toggle');
-    const links  = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
