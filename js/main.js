@@ -54,6 +54,32 @@
 }());
 
 /* --------------------------------------------------------------------------
+   Hero parallax — subtle depth on scroll
+   -------------------------------------------------------------------------- */
+(function () {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  let ticking = false;
+
+  function updateParallax() {
+    const scrollY = window.scrollY;
+    if (scrollY <= hero.offsetHeight) {
+      // Shift background at 0.25× scroll rate — refined, not dramatic
+      hero.style.backgroundPositionY = 'calc(50% + ' + (scrollY * 0.25) + 'px)';
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+}());
+
+/* --------------------------------------------------------------------------
    FAQ accordion
    -------------------------------------------------------------------------- */
 (function () {
