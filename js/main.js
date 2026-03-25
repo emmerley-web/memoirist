@@ -65,8 +65,8 @@
   function updateParallax() {
     const scrollY = window.scrollY;
     if (scrollY <= hero.offsetHeight) {
-      // Shift background at 0.25× scroll rate — refined, not dramatic
-      hero.style.backgroundPositionY = 'calc(50% + ' + (scrollY * 0.25) + 'px)';
+      // Shift background at 0.4× scroll rate — noticeable depth, still refined
+      hero.style.backgroundPositionY = 'calc(50% + ' + (scrollY * 0.4) + 'px)';
     }
     ticking = false;
   }

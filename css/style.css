@@ -36,7 +36,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: var(--font-sans);
@@ -1144,15 +1144,15 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
    -------------------------------------------------------------------------- */
 
 @keyframes heroReveal {
-  from { opacity: 0; transform: translateY(26px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: none; }
 }
 
-.hero-label  { animation: heroReveal 1s var(--ease-out-expo)  0ms   both; }
-.hero h1     { animation: heroReveal 1s var(--ease-out-expo)  110ms both; }
-.hero-sub    { animation: heroReveal 1s var(--ease-out-expo)  240ms both; }
-.hero-actions{ animation: heroReveal 1s var(--ease-out-expo)  370ms both; }
-.hero-quote  { animation: heroReveal 1s var(--ease-out-expo)  500ms both; }
+.hero-label  { animation: heroReveal 0.8s var(--ease-out-expo)  0ms   both; }
+.hero h1     { animation: heroReveal 0.8s var(--ease-out-expo)  80ms  both; }
+.hero-sub    { animation: heroReveal 0.8s var(--ease-out-expo)  160ms both; }
+.hero-actions{ animation: heroReveal 0.8s var(--ease-out-expo)  240ms both; }
+.hero-quote  { animation: heroReveal 0.8s var(--ease-out-expo)  320ms both; }
 
 /* --------------------------------------------------------------------------
    Scroll reveal
