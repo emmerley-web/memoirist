@@ -747,6 +747,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
 
 .faq-list { max-width: 780px; }
 
+/* "See all questions" link below homepage FAQ teaser */
+.faq-teaser-more { margin-top: 2.5rem; }
+
 .faq-item { border-bottom: 0.5px solid var(--rule); }
 
 .faq-q {
