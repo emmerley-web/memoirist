@@ -674,6 +674,19 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
 }
 .editorial-col p:last-child { margin-bottom: 0; }
 
+/* Aside pull quote — key phrase in the heading column of editorial sections */
+.section-aside-pull {
+  margin-top: 2rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--gold);
+  border-left: 2px solid var(--gold);
+  padding-left: 1rem;
+  max-width: 22ch;
+}
+
 /* --------------------------------------------------------------------------
    CTA strip — compact horizontal band (replaces old centred block)
    -------------------------------------------------------------------------- */
@@ -1133,12 +1146,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
 .footer-membership img {
   height: 28px;
   width: auto;
-  opacity: 0.6;
+  opacity: 0.55;
   filter: brightness(0) invert(1);
-  transition: opacity var(--transition);
 }
-
-.footer-membership:hover img { opacity: 0.85; }
 
 .footer-membership-label {
   font-size: 0.7rem;
