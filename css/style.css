@@ -643,37 +643,15 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
 }
 
 /* --------------------------------------------------------------------------
-   Book cover mock (press items for books without cover images)
+   Book cover images (real Amazon covers in press grid)
    -------------------------------------------------------------------------- */
 
-.book-cover-mock {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--ink);
-  padding: 0.875rem 0.75rem 0.75rem;
-  width: 76px;
-  height: 108px;
+.book-cover-img {
+  width: 90px;
+  height: auto;
   border-radius: 2px;
-  border-top: 3px solid var(--gold);
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.18);
+  box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
   flex-shrink: 0;
-}
-
-.book-cover-mock-title {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 0.6rem;
-  color: var(--paper);
-  line-height: 1.4;
-}
-
-.book-cover-mock-role {
-  font-size: 0.48rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
 }
 
 /* --------------------------------------------------------------------------
