@@ -3,7 +3,7 @@
    Global Styles
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* --------------------------------------------------------------------------
    Custom Properties
@@ -22,6 +22,7 @@
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-body:  'Libre Caslon Text', Georgia, serif;
 
   --max-w:       1140px;
   --section-gap: 7rem;
@@ -39,10 +40,10 @@
 html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.85;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,9 +72,22 @@ h1, h2, h3, h4 {
   font-feature-settings: "kern", "liga", "dlig", "onum";
 }
 
-h1 { font-size: clamp(2.9rem, 6vw, 5rem);       letter-spacing: -0.02em; line-height: 1.05; }
+h1 { font-size: clamp(2.9rem, 6vw, 5rem);       letter-spacing: -0.02em; line-height: 1.05; font-weight: 600; }
 h2 { font-size: clamp(2.1rem, 3.8vw, 3.2rem);   letter-spacing: -0.02em; }
 h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
+
+/* UI chrome stays in DM Sans — body text uses Libre Caslon */
+.site-nav,
+.site-footer,
+.btn,
+.card-link,
+.service-list-link,
+.stat-label,
+.about-fact-label,
+.footer-bottom,
+input, textarea, select, button {
+  font-family: var(--font-sans);
+}
 
 /* Paragraphs fill their column — max-widths set by context, not globally */
 
@@ -880,6 +894,11 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   font-size: 0.95rem;
   line-height: 1.7;
   max-width: 52ch;
+  margin-bottom: 0;
+}
+
+.service-list-body {
+  padding-bottom: 0.5rem;
 }
 
 .service-list-link {
@@ -892,7 +911,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
-  padding-top: 0.3rem;
+  padding-top: 1.25rem;
   transition: color var(--transition);
 }
 
