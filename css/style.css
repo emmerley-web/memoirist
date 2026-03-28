@@ -3,7 +3,7 @@
    Global Styles
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap');
 
 /* --------------------------------------------------------------------------
    Custom Properties
@@ -22,7 +22,7 @@
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
-  --font-body:  'Libre Caslon Text', Georgia, serif;
+  --font-body:  'Source Serif 4', Georgia, serif;
 
   --max-w:       1140px;
   --section-gap: 7rem;
@@ -657,11 +657,43 @@ input, textarea, select, button {
 }
 
 /* --------------------------------------------------------------------------
-   Book cover images (real Amazon covers in press grid)
+   Book cover mock — placeholder until real cover images are provided
    -------------------------------------------------------------------------- */
 
+.book-cover-mock {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--ink);
+  padding: 0.875rem 0.75rem 0.75rem;
+  width: 80px;
+  height: 112px;
+  border-radius: 2px;
+  border-top: 3px solid var(--gold);
+  box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
+  flex-shrink: 0;
+}
+
+.book-cover-mock-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.6rem;
+  color: var(--paper);
+  line-height: 1.4;
+}
+
+.book-cover-mock-role {
+  font-size: 0.48rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Real cover images — swap in once files are uploaded */
 .book-cover-img {
-  width: 90px;
+  width: 80px;
   height: auto;
   border-radius: 2px;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
@@ -1035,13 +1067,8 @@ input, textarea, select, button {
   flex-shrink: 0;
   font-size: 1.1rem;
   color: var(--gold);
-  transition: transform var(--transition);
   margin-top: 0.1rem;
   line-height: 1;
-}
-
-.faq-item.open .faq-icon {
-  transform: rotate(45deg);
 }
 
 .faq-a {
@@ -1315,10 +1342,12 @@ input, textarea, select, button {
 }
 
 .footer-membership img {
-  height: 28px;
+  height: 32px;
   width: auto;
-  opacity: 0.55;
-  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  background: white;
+  border-radius: 3px;
+  padding: 3px 8px;
 }
 
 .footer-membership-label {
