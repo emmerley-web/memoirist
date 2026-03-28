@@ -447,7 +447,11 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   border-right: 0.5px solid var(--rule);
   border-bottom: 0.5px solid var(--rule);
   transition: box-shadow var(--transition-lift), transform var(--transition-lift);
+  display: flex;
+  flex-direction: column;
 }
+
+.service-card p { flex: 1; }
 
 .service-card:hover {
   box-shadow: 0 12px 48px rgba(0,0,0,0.07);
@@ -471,7 +475,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: 1.75rem;
+  margin-top: auto;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--gold);
