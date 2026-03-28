@@ -626,25 +626,27 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   flex-direction: column;
   justify-content: space-between;
   background: var(--ink);
-  padding: 10px 14px;
-  height: 54px;
-  min-width: 100px;
-  max-width: 180px;
+  padding: 0.875rem 0.75rem 0.75rem;
+  width: 76px;
+  height: 108px;
   border-radius: 2px;
+  border-top: 3px solid var(--gold);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.18);
+  flex-shrink: 0;
 }
 
 .book-cover-mock-title {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--paper);
-  line-height: 1.25;
+  line-height: 1.4;
 }
 
 .book-cover-mock-role {
-  font-size: 0.5rem;
+  font-size: 0.48rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
 }
@@ -1053,6 +1055,14 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
   color: var(--muted);
   line-height: 1.85;
   margin-bottom: 1.1rem;
+}
+
+.service-fee-note {
+  margin-top: 1.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 0.5px solid var(--rule);
+  padding-top: 1.25rem;
 }
 
 .includes-list {
