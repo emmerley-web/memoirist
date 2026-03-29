@@ -3,7 +3,7 @@
    Global Styles
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 /* --------------------------------------------------------------------------
    Custom Properties
@@ -22,7 +22,7 @@
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
-  --font-body:  'Lora', Georgia, serif;
+  --font-body:  'Spectral', Georgia, serif;
 
   --max-w:       1140px;
   --section-gap: 7rem;
