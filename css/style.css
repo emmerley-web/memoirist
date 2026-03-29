@@ -37,7 +37,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 18px; }
+html { scroll-behavior: smooth; font-size: 20px; }
 
 body {
   font-family: var(--font-body);
@@ -72,9 +72,9 @@ h1, h2, h3, h4 {
   font-feature-settings: "kern", "liga", "dlig", "onum";
 }
 
-h1 { font-size: clamp(2.9rem, 6vw, 5rem);       letter-spacing: -0.02em; line-height: 1.05; font-weight: 600; }
-h2 { font-size: clamp(2.1rem, 3.8vw, 3.2rem);   letter-spacing: -0.02em; }
-h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.6rem, 6vw, 4.5rem);      letter-spacing: -0.02em; line-height: 1.05; font-weight: 600; }
+h2 { font-size: clamp(1.9rem, 3.8vw, 2.88rem);  letter-spacing: -0.02em; }
+h3 { font-size: clamp(1.1rem, 2.2vw, 1.4rem);   letter-spacing: -0.01em; }
 
 /* UI chrome stays in DM Sans — body text uses Libre Caslon */
 .site-nav,
