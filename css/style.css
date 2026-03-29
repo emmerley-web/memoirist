@@ -1342,12 +1342,10 @@ input, textarea, select, button {
 }
 
 .footer-membership img {
-  height: 32px;
+  height: 28px;
   width: auto;
-  opacity: 0.85;
-  background: white;
-  border-radius: 3px;
-  padding: 3px 8px;
+  opacity: 0.55;
+  filter: brightness(0) invert(1);
 }
 
 .footer-membership-label {
