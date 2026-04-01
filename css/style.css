@@ -12,7 +12,7 @@
 :root {
   --ink:        #1a1917;
   --ink-light:  #3a3836;
-  --muted:      #6b6560;
+  --muted:      #4e4b48;
   --rule:       #e0dbd2;
   --paper:      #faf9f6;
   --cream:      #f3f0e8;
@@ -378,8 +378,8 @@ input, textarea, select, button {
 
 .hero-quote cite {
   display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(250,249,246,0.45);
   font-style: normal;
@@ -608,8 +608,8 @@ input, textarea, select, button {
 
 .testimonial-attr {
   margin-top: 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
@@ -646,7 +646,7 @@ input, textarea, select, button {
 
 .testimonial-card-attr {
   font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
