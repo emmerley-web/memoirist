@@ -41,7 +41,7 @@ html { scroll-behavior: smooth; font-size: 17px; }
 
 body {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink);
   background: var(--paper);
   line-height: 1.7;
