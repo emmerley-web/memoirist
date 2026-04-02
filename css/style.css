@@ -698,7 +698,8 @@ input, textarea, select, button {
 /* Real cover images — swap in once files are uploaded */
 .book-cover-img {
   display: block;
-  width: 80px;
+  width: 80px !important;
+  max-width: 80px;
   height: auto;
   border-radius: 2px;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
