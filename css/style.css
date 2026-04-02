@@ -634,15 +634,17 @@ input, textarea, select, button {
   border-right: 0.5px solid var(--rule);
   border-bottom: 0.5px solid var(--rule);
   border-left: 0.5px solid var(--rule);
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.75;
   color: var(--ink);
-  margin-bottom: 1.25rem;
+  flex: 1;
 }
 
 .testimonial-card-attr {
@@ -651,6 +653,7 @@ input, textarea, select, button {
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
+  margin-top: 1.25rem;
 }
 
 @media (max-width: 640px) {
@@ -694,8 +697,8 @@ input, textarea, select, button {
 
 /* Real cover images — swap in once files are uploaded */
 .book-cover-img {
-  width: 80px;
-  height: auto;
+  height: 120px;
+  width: auto;
   border-radius: 2px;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
   flex-shrink: 0;
@@ -816,7 +819,7 @@ input, textarea, select, button {
   transform: translateY(-3px);
 }
 
-.press-logo-link { display: inline-block; }
+.press-logo-link { display: inline-flex; align-items: flex-start; min-height: 120px; }
 .press-logo { height: 36px; width: auto; }
 
 /* Duke CE logo sits on brand-navy so the white SVG is visible */
