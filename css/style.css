@@ -697,14 +697,13 @@ input, textarea, select, button {
 
 /* Real cover images — swap in once files are uploaded */
 .press-book-link {
-  display: block;
-  height: 120px;
+  display: inline-block;
   align-self: flex-start;
 }
 
 .book-cover-img {
   display: block;
-  height: 100%;
+  height: 120px;
   width: auto;
   border-radius: 2px;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
@@ -816,7 +815,7 @@ input, textarea, select, button {
   border-bottom: 0.5px solid var(--rule);
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.6rem;
   transition: box-shadow var(--transition-lift), transform var(--transition-lift);
 }
 
