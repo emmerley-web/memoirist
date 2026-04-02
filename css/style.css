@@ -696,15 +696,18 @@ input, textarea, select, button {
 }
 
 /* Real cover images — swap in once files are uploaded */
+.press-book-link {
+  display: block;
+  height: 120px;
+  align-self: flex-start;
+}
+
 .book-cover-img {
   display: block;
-  width: 80px !important;
-  max-width: 80px;
-  height: auto;
+  height: 100%;
+  width: auto;
   border-radius: 2px;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.22);
-  flex-shrink: 0;
-  align-self: flex-start;
 }
 
 /* --------------------------------------------------------------------------
@@ -822,7 +825,7 @@ input, textarea, select, button {
   transform: translateY(-3px);
 }
 
-.press-logo-link { display: inline-flex; align-items: flex-start; min-height: 120px; }
+.press-logo-link { display: inline-flex; align-items: flex-start; align-self: flex-start; }
 .press-logo { height: 36px; width: auto; }
 
 /* Duke CE logo sits on brand-navy so the white SVG is visible */
